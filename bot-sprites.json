@@ -1,0 +1,17 @@
+{
+    "textures": [
+        {
+            "image": "bot-icon.png",
+            "size": [64, 64],
+            "sprites": [
+                {
+                    "name": "qa.macro_bot/btn-icon",
+                    "textureRect": [0, 0, 64, 64],
+                    "spriteOffset": [0, 0],
+                    "spriteSourceSize": [64, 64],
+                    "textureRotated": false
+                }
+            ]
+        }
+    }
+}

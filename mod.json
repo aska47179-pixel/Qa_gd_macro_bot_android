@@ -1,0 +1,32 @@
+{
+    "geode": "5.7.1",
+    "gd": {
+        "android": "*"
+    },
+    "id": "qa.gd_macro_bot_android",
+    "version": "1.0.0",
+    "name": "GD Macro Bot (Android)",
+    "developer": "qa",
+    "description": "A standalone bot to record and playback gameplay specifically for Geometry Dash Android.",
+    "repository": "https://github.com/qa/gd-macro-bot-android",
+    "dependencies": {
+        "geode.loader": ">=5.7.1"
+    },
+    "resources": {
+        "sprites": [
+            "resources/*.json"
+        ]
+    },
+    "settings": {
+        "bot-mode": {
+            "name": "Bot Mode",
+            "description": "Select the operation mode for the macro bot.",
+            "type": "string",
+            "default": "Disabled",
+            "control": {
+                "type": "selection",
+                "items": ["Disabled", "Record", "Playback"]
+            }
+        }
+    }
+}
