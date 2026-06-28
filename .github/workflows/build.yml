@@ -1,4 +1,4 @@
-ildname: Build Geode Mod
+idname: Build Geode Mod
 
 on:
   push:
