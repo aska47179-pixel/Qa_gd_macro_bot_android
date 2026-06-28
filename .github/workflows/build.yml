@@ -7,4 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: geode-sdk/build-geode-mod@main
+      
+      # Ini langkah krusial biar Geode SDK terinstall
+      - name: Install Geode CLI
+        run: |
+          wget https://github.com/geode-sdk/geode/releases/latest/download/geode-cli-linux-x64.tar.gz
+          tar -xvf geode-cli-linux-x64.tar.gz
+          ./geode sdk install
+
+      - name: Build Mod
+        uses: geode-sdk/build-geode-mod@main
