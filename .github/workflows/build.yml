@@ -1,5 +1,11 @@
 name: Build Geode Mod
-on: [push, pull_request]
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
 jobs:
   build:
     strategy:
@@ -10,11 +16,14 @@ jobs:
             target: Android32
           - name: Android64
             target: Android64
+
     name: ${{ matrix.config.name }}
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
-      - uses: geode-sdk/build-geode-mod@main
+
+      - name: Build Mod
+        uses: geode-sdk/build-geode-mod@v3
         with:
           target: ${{ matrix.config.target }}
-concurrency:
