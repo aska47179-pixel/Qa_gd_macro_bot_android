@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.22)
 
 project(gd_macro_bot_android)
 
-find_package(Geode REQUIRED)
+find_package(Geode CONFIG REQUIRED)
 
 add_geode_mod(
     qa.gd_macro_bot_android
